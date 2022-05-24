@@ -1,0 +1,50 @@
+package com.usuario.service.servicio;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.usuario.service.entity.Usuario;
+import com.usuario.service.repository.UsuarioRepository;
+
+@Service
+public class UsuarioService {
+	
+	//Vamos a realizar la inyección del servicio creado del repository
+	
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+	
+	
+	//Este metodo me trae todos los empleados 
+	//C
+	public List<Usuario> getAll(){
+		return usuarioRepository.findAll();
+	} 
+	
+	//Este metodo recupera la consulra por ID de usuario
+	//R
+	public Usuario getUsuarioById (int id) {		
+		return usuarioRepository.findById(id).orElse(null);			
+				
+	}
+	
+	//Este metodo guarda un usuario
+	//U
+	public Usuario save (Usuario usuario) {
+		Usuario nuevoUsuario =  usuarioRepository.save(usuario);		
+		return nuevoUsuario;
+	}
+	
+	//Este metodo elimina un usuario
+	//D
+	public void bajaUsuario(int id) {
+		usuarioRepository.deleteById(id);
+	}
+	
+	
+	
+	
+	
+}

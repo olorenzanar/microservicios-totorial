@@ -1,0 +1,6 @@
+# Informacion servidor
+server:  
+  port: ${PORT:8081}
+client:
+	serviceUrl:
+		defaulZone:http://localhost:8081

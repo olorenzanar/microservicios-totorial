@@ -1,0 +1,3 @@
+# Informacion servidor
+server:  
+  port: ${PORT:8081}

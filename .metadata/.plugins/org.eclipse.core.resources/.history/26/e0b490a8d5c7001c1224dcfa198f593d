@@ -1,0 +1,11 @@
+package com.usuario.service.entity;
+
+import javax.persistence.Entity;
+
+public class Usuario {
+	
+	@Entity
+	private int id;
+	private
+
+}

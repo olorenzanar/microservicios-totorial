@@ -1,0 +1,40 @@
+package com.usuario.service.model;
+
+public class Carro {
+
+	private String marca;
+	private String modelo;
+	private int usaurioId;
+
+	public int getUsaurioId() {
+		return usaurioId;
+	}
+
+	public void setUsaurioId(int usaurioId) {
+		this.usaurioId = usaurioId;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+
+
+	public Carro() {
+		super();
+
+	}
+
+}
